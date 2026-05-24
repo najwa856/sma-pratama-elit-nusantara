@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurikulum Merdeka</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f0f2f5;
+    line-height:1.8;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    background:#25a54f;
+    padding:15px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    margin:0 5px;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:#25a54f;
+    border-radius:8px;
+}
+
+/* HEADER */
+.judul{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size:cover;
+    text-align:center;
+    padding:130px 20px;
+    color:white;
+}
+
+.judul h1{
+    font-size:55px;
+    margin-bottom:15px;
+    text-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.judul p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    opacity:0.95;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* HEADER CARD */
+.card-header{
+    background:#25a54f;
+    color:white;
+    padding:40px 30px;
+    text-align:center;
+}
+
+.card-header h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.card-header p{
+    font-size:17px;
+    opacity:0.95;
+}
+
+/* GARIS */
+.garis{
+    width:90px;
+    height:5px;
+    background:white;
+    margin:18px auto 0;
+    border-radius:10px;
+}
+
+/* BODY */
+.card-body{
+    padding:40px;
+}
+
+/* PARAGRAF */
+.card-body p{
+    margin-bottom:22px;
+    text-align:justify;
+    font-size:17px;
+    color:#444;
+}
+
+/* HIGHLIGHT */
+.highlight{
+    background:#25a54f;
+    color:white;
+    padding:25px;
+    border-radius:18px;
+    margin:30px 0;
+}
+
+.highlight h3{
+    margin-bottom:12px;
+    font-size:25px;
+}
+
+.highlight p{
+    color:white;
+    margin:0;
+}
+
+/* FITUR */
+.fitur{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.fitur-box{
+    background:#f7f7f7;
+    padding:25px;
+    border-radius:18px;
+    transition:0.3s;
+    border-left:6px solid #25a54f;
+}
+
+.fitur-box:hover{
+    transform:translateY(-5px);
+    background:#25a54f;
+    color:white;
+}
+
+.fitur-box:hover p{
+    color:white;
+}
+
+.fitur-box h4{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.fitur-box p{
+    color:#555;
+    font-size:15px;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .judul h1{
+        font-size:40px;
+    }
+
+    .judul p{
+        font-size:17px;
+    }
+
+    .card-header h2{
+        font-size:30px;
+    }
+
+    .card-body{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="akademik.html">Akademik</a>
+    <a href="ekskul.html">Ekstrakurikuler</a>
+    <a href="prestasi.html">Prestasi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+
+</nav>
+
+<!-- HEADER -->
+<div class="judul">
+
+    <h1>Kurikulum Merdeka</h1>
+
+    <p>
+        Sistem pembelajaran modern yang mendorong siswa
+        menjadi generasi kreatif, aktif,
+        inovatif, dan siap menghadapi masa depan.
+    </p>
+
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <div class="card">
+
+        <!-- HEADER CARD -->
+        <div class="card-header">
+
+            <h2>Sistem Pembelajaran Modern</h2>
+
+            <p>
+                Pembelajaran fleksibel yang berfokus
+                pada pengembangan potensi dan kreativitas siswa
+            </p>
+
+            <div class="garis"></div>
+
+        </div>
+
+        <!-- BODY -->
+        <div class="card-body">
+
+            <p>
+                Kurikulum Merdeka merupakan sistem pembelajaran modern
+                yang dirancang untuk memberikan kebebasan kepada siswa
+                dalam mengembangkan bakat, minat,
+                dan kemampuan sesuai potensi masing-masing.
+                Melalui sistem ini, siswa diajak untuk belajar
+                dengan cara yang lebih aktif, kreatif,
+                menyenangkan, dan tidak monoton.
+            </p>
+
+            <p>
+                Dalam penerapannya, siswa tidak hanya fokus pada teori,
+                tetapi juga belajar melalui praktik langsung,
+                proyek kolaboratif, presentasi,
+                diskusi kelompok, serta kegiatan eksplorasi.
+                Hal ini membantu siswa menjadi lebih percaya diri,
+                mampu berpikir kritis,
+                dan memiliki kemampuan memecahkan masalah.
+            </p>
+
+            <p>
+                Guru berperan sebagai pembimbing
+                yang membantu siswa menemukan potensi terbaik mereka.
+                Dengan metode belajar yang fleksibel,
+                siswa memiliki kesempatan untuk berkembang
+                sesuai minat dan gaya belajar masing-masing.
+            </p>
+
+            <!-- HIGHLIGHT -->
+            <div class="highlight">
+
+                <h3>✨ Tujuan Kurikulum Merdeka</h3>
+
+                <p>
+                    Membentuk generasi muda yang kreatif,
+                    inovatif, mandiri, berkarakter,
+                    serta mampu bersaing di era global
+                    dengan keterampilan abad 21.
+                </p>
+
+            </div>
+
+            <!-- FITUR -->
+            <div class="fitur">
+
+                <div class="fitur-box">
+
+                    <h4>🎯 Belajar Fleksibel</h4>
+
+                    <p>
+                        Siswa dapat mengembangkan minat
+                        dan bakat sesuai kemampuan masing-masing.
+                    </p>
+
+                </div>
+
+                <div class="fitur-box">
+
+                    <h4>💡 Kreatif & Inovatif</h4>
+
+                    <p>
+                        Mendorong siswa berpikir kreatif
+                        dan menghasilkan ide-ide baru.
+                    </p>
+
+                </div>
+
+                <div class="fitur-box">
+
+                    <h4>🤝 Kolaborasi Aktif</h4>
+
+                    <p>
+                        Pembelajaran dilakukan melalui diskusi,
+                        proyek, dan kerja sama tim.
+                    </p>
+
+                </div>
+
+                <div class="fitur-box">
+
+                    <h4>🌍 Siap Masa Depan</h4>
+
+                    <p>
+                        Membantu siswa memiliki keterampilan
+                        yang dibutuhkan di era modern.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+ <p>© 2026 SMA Pratama Elit Nusantara</p>
+
+</footer>
+
+</body>
+</html>

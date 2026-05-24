@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Sekolah</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* NAVIGASI */
+nav {
+    background-color: #25a54f;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #25a54f;
+    border-radius: 5px;
+}
+
+/* HEADER */
+header {
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size: cover;
+    text-align: center;
+    padding: 120px 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* JUDUL */
+.section-title {
+    background: #25a54f;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* BOX HIJAU */
+.green-box,
+.visi-box {
+    background: #25a54f;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.green-box p,
+.visi-box p,
+.visi-box li{
+    color: white;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* GURU */
+.guru-card {
+    background: #25a54f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.guru-card:hover{
+    transform: scale(1.03);
+}
+
+.guru-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.guru-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.guru-mapel {
+    font-size: 14px;
+}
+
+/* GRID */
+.guru-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.guru-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .guru-grid-2,
+    .guru-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    header h1{
+        font-size: 36px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Beranda Sekolah</a>
+    <a href="profil.html">Profil Sekolah</a>
+    <a href="akademik.html">Program Akademik</a>
+    <a href="ekskul.html">Ekstrakurikuler</a>
+    <a href="prestasi.html">Prestasi & Penghargaan</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Profil Sekolah</h1>
+    <p>Mengenal Lebih Dekat SMA Pratama Elit Nusantara</p>
+</header>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <!-- SEJARAH -->
+    <div class="card">
+
+        <div class="section-title">
+            Sejarah Sekolah
+        </div>
+
+        <div class="green-box">
+
+            <p>
+                SMA Pratama Elit Nusantara didirikan sebagai bentuk kepedulian terhadap
+                pentingnya pendidikan berkualitas bagi generasi muda di Aceh dan sekitarnya.
+                Sekolah ini hadir dengan semangat untuk menciptakan lingkungan belajar
+                yang modern, nyaman, dan mampu membentuk siswa menjadi pribadi unggul,
+                berkarakter, serta siap menghadapi perkembangan zaman.
+            </p>
+
+            <p>
+                Pada awal berdirinya, sekolah hanya memiliki beberapa ruang kelas sederhana
+                dengan jumlah siswa yang masih terbatas. Namun, berkat dukungan masyarakat,
+                tenaga pendidik profesional, dan semangat belajar para siswa,
+                SMA Pratama Elit Nusantara berkembang pesat menjadi salah satu sekolah
+                favorit yang dipercaya oleh masyarakat.
+            </p>
+
+            <p>
+                Seiring berjalannya waktu, sekolah terus melakukan berbagai inovasi
+                dalam bidang pendidikan. Fasilitas pembelajaran modern seperti laboratorium,
+                perpustakaan digital, ruang multimedia, serta area belajar yang nyaman
+                mulai dikembangkan untuk mendukung proses belajar yang lebih efektif
+                dan menyenangkan.
+            </p>
+
+            <p>
+                Tidak hanya fokus pada prestasi akademik, SMA Pratama Elit Nusantara
+                juga menanamkan nilai disiplin, tanggung jawab, kepedulian sosial,
+                dan akhlak mulia kepada seluruh siswa.
+                Berbagai kegiatan organisasi, ekstrakurikuler,
+                dan program pengembangan diri terus dilakukan
+                untuk membantu siswa menemukan bakat dan potensi terbaik mereka.
+            </p>
+
+            <p>
+                Hingga saat ini, SMA Pratama Elit Nusantara terus berkomitmen
+                menjadi sekolah unggulan yang mampu mencetak generasi cerdas,
+                kreatif, inovatif, dan berdaya saing tinggi.
+                Dengan semangat perubahan dan kemajuan,
+                sekolah siap mengantarkan siswa menuju masa depan yang gemilang
+                dan penuh prestasi.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- VISI -->
+    <div class="card">
+
+        <div class="section-title">
+            Visi
+        </div>
+
+        <div class="visi-box">
+            <p>
+                Menjadi sekolah unggul yang menghasilkan generasi cerdas,
+                berkarakter, kreatif, dan berdaya saing tinggi
+                di tingkat nasional maupun internasional.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- MISI -->
+    <div class="card">
+
+        <div class="section-title">
+            Misi
+        </div>
+
+        <div class="visi-box">
+
+            <ul>
+                <li>Meningkatkan kualitas pembelajaran modern dan inovatif</li>
+                <li>Menanamkan nilai karakter, disiplin, dan tanggung jawab</li>
+                <li>Mengembangkan bakat dan potensi siswa secara optimal</li>
+                <li>Menciptakan lingkungan belajar yang nyaman dan inspiratif</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- GURU -->
+    <div class="card">
+
+        <div class="section-title">
+            Tenaga Pendidik
+        </div>
+
+        <div class="guru-grid-2">
+
+            <div class="guru-card">
+                <img src="guru1.jpg">
+                <div class="guru-name">Ibu Wan Selvi Andini, S.Pd</div>
+                <div class="guru-mapel">Guru Kimia</div>
+            </div>
+
+            <div class="guru-card">
+                <img src="guru2.jpg">
+                <div class="guru-name">Ibu Hura Aini, S.Pd</div>
+                <div class="guru-mapel">Guru Biologi</div>
+            </div>
+
+        </div>
+
+        <div class="guru-grid-3">
+
+            <div class="guru-card">
+                <img src="guru3.jpg">
+                <div class="guru-name">Ibu Tari Nuriah Zarmadi, S.Pd</div>
+                <div class="guru-mapel">Perpustakaan</div>
+            </div>
+
+            <div class="guru-card">
+                <img src="guru4.jpg">
+                <div class="guru-name">Ibu Eva Maulida, S.Pd</div>
+                <div class="guru-mapel">Seni Budaya</div>
+            </div>
+
+            <div class="guru-card">
+                <img src="guru5.jpg">
+                <div class="guru-name">Ibu Rifa Ulayya, S.Pd</div>
+                <div class="guru-mapel">Bidang Konseling</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+        <p>© 2026 SMA Pratama Elit Nusantara</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

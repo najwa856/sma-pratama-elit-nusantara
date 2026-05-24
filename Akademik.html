@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Akademik</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f2f5;
+    color:#333;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+nav{
+    background:#25a54f;
+    padding:15px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    margin:0 5px;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:#25a54f;
+    border-radius:6px;
+}
+
+/* DROPDOWN */
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropbtn{
+    background:transparent;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.dropbtn:hover{
+    background:white;
+    color:#25a54f;
+    border-radius:6px;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:white;
+    min-width:230px;
+    text-align:left;
+    border-radius:10px;
+    overflow:visible;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    top:48px;
+    left:0;
+    z-index:1000;
+}
+
+.dropdown-content a{
+    color:#333;
+    padding:14px 16px;
+    display:block;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.dropdown-content a:hover{
+    background:#25a54f;
+    color:white;
+}
+
+/* SUB MENU */
+.dropdown-sub{
+    position:relative;
+}
+
+.sub-btn{
+    display:block;
+    width:100%;
+    background:white;
+    color:#333 !important;
+    text-decoration:none;
+    padding:14px 16px;
+    transition:0.3s;
+}
+
+.sub-btn:hover{
+    background:#25a54f;
+    color:white !important;
+}
+
+.dropdown-sub-content{
+    display:none;
+    position:absolute;
+    left:100%;
+    top:0;
+    background:white;
+    min-width:220px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    z-index:1001;
+}
+
+.dropdown-sub-content a{
+    color:#333;
+    padding:14px 16px;
+    display:block;
+    text-decoration:none;
+}
+
+.dropdown-sub-content a:hover{
+    background:#25a54f;
+    color:white;
+}
+
+/* AKTIF */
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.dropdown-sub:hover .dropdown-sub-content{
+    display:block;
+}
+
+/* HEADER */
+header{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size:cover;
+    text-align:center;
+    padding:130px 20px;
+    color:white;
+}
+
+header h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:50px auto;
+    padding:20px;
+}
+
+/* TITLE BOX */
+.title-box{
+    background:#25a54f;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    margin-bottom:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.title-box h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.title-box p{
+    font-size:18px;
+    opacity:0.95;
+}
+
+/* GRID */
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+/* CARD */
+.program-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.program-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.program-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.program-card:hover img{
+    transform:scale(1.05);
+}
+
+/* TEXT */
+.program-text{
+    background:#25a54f;
+    color:white;
+    padding:25px;
+    min-height:220px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.program-text h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.program-text p{
+    font-size:15px;
+}
+
+/* BADGE */
+.badge{
+    margin-top:15px;
+    background:rgba(255,255,255,0.2);
+    padding:8px 12px;
+    border-radius:8px;
+    display:inline-block;
+    font-size:14px;
+}
+
+/* FASILITAS */
+.fasilitas{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.fasilitas h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.fasilitas-box{
+    background:#25a54f;
+    color:white;
+    padding:30px;
+    border-radius:18px;
+}
+
+.fasilitas-box p{
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+.fasilitas-list{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.fasilitas-list li{
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    header p{
+        font-size:18px;
+    }
+
+    .title-box h2{
+        font-size:30px;
+    }
+
+    .program-card img{
+        height:180px;
+    }
+
+    .dropdown-sub-content{
+        left:0;
+        top:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <a href="index.html">Beranda Sekolah</a>
+    <a href="profil.html">Profil Sekolah</a>
+
+    <!-- DROPDOWN AKADEMIK -->
+    <div class="dropdown">
+
+        <button class="dropbtn">
+            Akademik ▼
+        </button>
+
+        <div class="dropdown-content">
+
+            <a href="jadwal.html">Jadwal Sekolah</a>
+
+            <!-- SUB MENU -->
+            <div class="dropdown-sub">
+
+                <a href="#" class="sub-btn">
+                    Kurikulum ▶
+                </a>
+
+                <div class="dropdown-sub-content">
+
+                    <a href="merdeka.html">
+                        Kurikulum Merdeka
+                    </a>
+
+                    <a href="k13.html">
+                        Kurikulum 13
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="beasiswa.html">Beasiswa</a>
+
+        </div>
+
+    </div>
+
+    <a href="ekskul.html">Ekstrakurikuler</a>
+    <a href="prestasi.html">Prestasi & Penghargaan</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+
+</nav>
+
+<!-- HEADER -->
+<header>
+
+    <h1>Program Akademik</h1>
+
+    <p>
+        Membentuk Generasi Cerdas,
+        Kreatif, dan Siap Menghadapi Masa Depan
+    </p>
+
+</header>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <!-- TITLE -->
+    <div class="title-box">
+
+        <h2>Program Pembelajaran</h2>
+
+        <p>
+            SMA Pratama Elit Nusantara menghadirkan sistem pembelajaran modern
+            yang dirancang untuk meningkatkan kemampuan akademik,
+            kreativitas, serta karakter siswa.
+            Dengan dukungan tenaga pendidik profesional dan fasilitas lengkap,
+            siswa didorong untuk berkembang secara optimal
+            sesuai minat dan potensi masing-masing.
+        </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="program-grid">
+
+        <!-- IPA -->
+        <div class="program-card">
+
+            <img src="ipa.jpg" alt="IPA">
+
+            <div class="program-text">
+
+                <h3>🔬 IPA</h3>
+
+                <p>
+                    Program Ilmu Pengetahuan Alam berfokus
+                    pada pembelajaran fisika, kimia, dan biologi
+                    untuk mengembangkan kemampuan berpikir ilmiah siswa.
+                </p>
+
+                <div class="badge">
+                    Sains & Penelitian
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- IPS -->
+        <div class="program-card">
+
+            <img src="ips.jpg" alt="IPS">
+
+            <div class="program-text">
+
+                <h3>🌍 IPS</h3>
+
+                <p>
+                    Program Ilmu Pengetahuan Sosial mempelajari
+                    ekonomi, geografi, sejarah, dan sosiologi
+                    untuk memahami kehidupan masyarakat modern.
+                </p>
+
+                <div class="badge">
+                    Sosial & Ekonomi
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bahasa -->
+        <div class="program-card">
+
+            <img src="bahasa.jpg" alt="Bahasa">
+
+            <div class="program-text">
+
+                <h3>🗣️ Bahasa</h3>
+
+                <p>
+                    Program Bahasa membantu siswa meningkatkan
+                    kemampuan komunikasi dalam bahasa Indonesia
+                    maupun bahasa asing secara aktif dan kreatif.
+                </p>
+
+                <div class="badge">
+                    Komunikasi Global
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FASILITAS -->
+    <div class="fasilitas">
+
+        <h2>Fasilitas Pendukung</h2>
+
+        <div class="fasilitas-box">
+
+            <p>
+                Untuk mendukung proses pembelajaran yang nyaman
+                dan berkualitas, SMA Pratama Elit Nusantara menyediakan
+                berbagai fasilitas modern yang lengkap dan memadai.
+            </p>
+
+            <ul class="fasilitas-list">
+
+                <li>📚 Perpustakaan Digital & Modern</li>
+
+                <li>💻 Laboratorium Komputer Berbasis Teknologi</li>
+
+                <li>🔬 Laboratorium IPA Lengkap</li>
+
+                <li>🕌 Mushala yang Nyaman dan Bersih</li>
+
+                <li>🌳 Lingkungan Sekolah Asri dan Nyaman</li>
+
+                <li>📶 Akses Internet & WiFi Sekolah</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMA Pratama Elit Nusantara</p>
+</footer>
+
+</body>
+</html>

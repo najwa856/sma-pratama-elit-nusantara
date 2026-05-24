@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal Sekolah</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f2f5;
+    color:#333;
+}
+
+/* HEADER */
+.judul{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size:cover;
+    text-align:center;
+    padding:130px 20px;
+    color:white;
+}
+
+.judul h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.judul p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:50px auto;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    padding:30px;
+}
+
+/* INFO BOX */
+.info-box{
+    background:#25a54f;
+    color:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.info-box h2{
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+.info-box p{
+    font-size:17px;
+}
+
+/* TABLE */
+.table-wrapper{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:900px;
+}
+
+/* HEADER TABLE */
+th{
+    background:#25a54f;
+    color:white;
+    padding:16px;
+    font-size:16px;
+}
+
+/* DATA TABLE */
+td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    transition:0.3s;
+}
+
+/* ROW */
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+tr:hover{
+    background:#e8f7ed;
+}
+
+/* BADGE HARI */
+.hari{
+    background:#25a54f;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+    display:inline-block;
+}
+
+/* JAM PELAJARAN */
+.jam{
+    background:#e8f7ed;
+    color:#25a54f;
+    padding:6px 12px;
+    border-radius:10px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .judul h1{
+        font-size:38px;
+    }
+
+    .judul p{
+        font-size:17px;
+    }
+
+    th, td{
+        padding:12px;
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="judul">
+
+    <h1>Jadwal Sekolah</h1>
+
+    <p>
+        Jadwal Kegiatan Belajar Mengajar SMA Pratama Elit Nusantara
+    </p>
+
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <div class="card">
+
+        <!-- INFO -->
+        <div class="info-box">
+
+            <h2>Informasi Jadwal</h2>
+
+            <p>
+                Berikut adalah jadwal pelajaran harian siswa
+                SMA Pratama Elit Nusantara yang disusun agar kegiatan
+                belajar mengajar berjalan teratur, disiplin, dan efektif.
+            </p>
+
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-wrapper">
+
+            <table>
+
+                <tr>
+                    <th>Hari</th>
+                    <th>Mata Pelajaran</th>
+                    <th>Guru Pengajar</th>
+                    <th>Jam Pelajaran</th>
+                </tr>
+
+                <tr>
+                    <td><span class="hari">Senin</span></td>
+                    <td>Kimia</td>
+                    <td>Ibu Wan Selvi Andini</td>
+                    <td><span class="jam">07.30 - 09.30</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="hari">Selasa</span></td>
+                    <td>Biologi</td>
+                    <td>Ibu Hura Aini</td>
+                    <td><span class="jam">09.30 - 11.30</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="hari">Rabu</span></td>
+                    <td>Seni Budaya</td>
+                    <td>Ibu Eva Maulida</td>
+                    <td><span class="jam">08.00 - 10.00</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="hari">Kamis</span></td>
+                    <td>Bidang Konseling (BK)</td>
+                    <td>Ibu Rifa Ulayya</td>
+                    <td><span class="jam">10.00 - 12.00</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="hari">Jumat</span></td>
+                    <td>Mengenal Perpustakaan</td>
+                    <td>Ibu Tari Nuriah Zarmadi</td>
+                    <td><span class="jam">08.00 - 10.00</span></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMA Pratama Elit Nusantara</p>
+</footer>
+
+</body>
+</html>

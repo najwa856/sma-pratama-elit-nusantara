@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Beasiswa</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f2f5;
+    color:#333;
+    line-height:1.8;
+}
+
+/* HEADER */
+.judul{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size:cover;
+    text-align:center;
+    padding:130px 20px;
+    color:white;
+}
+
+.judul h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.judul p{
+    font-size:20px;
+    opacity:0.9;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:50px auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.icon{
+    font-size:55px;
+    text-align:center;
+    padding-top:25px;
+}
+
+/* JUDUL */
+.card h2{
+    text-align:center;
+    color:#25a54f;
+    font-size:28px;
+    margin:15px 20px;
+}
+
+/* KOTAK HIJAU */
+.isi{
+    background:#25a54f;
+    padding:25px;
+    color:white;
+    min-height:220px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* TEKS */
+.isi p{
+    color:white;
+    text-align:justify;
+    font-size:16px;
+}
+
+/* BADGE */
+.badge{
+    margin-top:18px;
+    background:rgba(255,255,255,0.2);
+    padding:8px 14px;
+    border-radius:8px;
+    display:inline-block;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .judul h1{
+        font-size:40px;
+    }
+
+    .judul p{
+        font-size:17px;
+    }
+
+    .card h2{
+        font-size:24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="judul">
+
+    <h1>Program Beasiswa</h1>
+
+    <p>
+        SMA Pratama Elit Nusantara menyediakan berbagai program beasiswa
+        untuk mendukung siswa berprestasi, berbakat,
+        dan memiliki semangat tinggi dalam meraih masa depan gemilang.
+    </p>
+
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <!-- 1 -->
+    <div class="card">
+
+        <div class="icon">🏆</div>
+
+        <h2>Beasiswa Prestasi</h2>
+
+        <div class="isi">
+
+            <p>
+                Beasiswa diberikan kepada siswa yang memiliki
+                prestasi akademik unggul serta aktif dalam berbagai
+                kegiatan sekolah maupun kompetisi pendidikan.
+            </p>
+
+            <div class="badge">
+                Akademik Terbaik
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+
+        <div class="icon">📖</div>
+
+        <h2>Beasiswa Tahfidz</h2>
+
+        <div class="isi">
+
+            <p>
+                Program khusus bagi siswa yang memiliki hafalan
+                Al-Qur’an dengan pencapaian tertentu dan akhlak
+                yang baik dalam kehidupan sehari-hari.
+            </p>
+
+            <div class="badge">
+                Hafalan Al-Qur’an
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+
+        <div class="icon">⚽</div>
+
+        <h2>Beasiswa Atlet</h2>
+
+        <div class="isi">
+
+            <p>
+                Diberikan kepada siswa yang memiliki prestasi
+                di bidang olahraga tingkat daerah,
+                nasional, maupun internasional.
+            </p>
+
+            <div class="badge">
+                Olahraga Berprestasi
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+
+        <div class="icon">🎨</div>
+
+        <h2>Beasiswa Seni</h2>
+
+        <div class="isi">
+
+            <p>
+                Program beasiswa bagi siswa yang memiliki bakat
+                dan kemampuan luar biasa di bidang seni,
+                budaya, musik, maupun kreativitas lainnya.
+            </p>
+
+            <div class="badge">
+                Seni & Kreativitas
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+
+        <div class="icon">🤝</div>
+
+        <h2>Beasiswa Kurang Mampu</h2>
+
+        <div class="isi">
+
+            <p>
+                Bantuan pendidikan bagi siswa dari keluarga
+                kurang mampu agar tetap dapat memperoleh
+                pendidikan berkualitas tanpa hambatan biaya.
+            </p>
+
+            <div class="badge">
+                Bantuan Pendidikan
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+
+        <div class="icon">📢</div>
+
+        <h2>Beasiswa Organisasi</h2>
+
+        <div class="isi">
+
+            <p>
+                Beasiswa untuk siswa yang aktif dalam organisasi
+                sekolah dan memiliki jiwa kepemimpinan,
+                tanggung jawab, serta kemampuan bekerja sama.
+            </p>
+
+            <div class="badge">
+                Leadership Student
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMA Pratama Elit Nusantara</p>
+</footer>
+
+</body>
+</html>

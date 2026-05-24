@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestasi Sekolah</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f2f5;
+    color:#333;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+nav{
+    background:#25a54f;
+    padding:15px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    margin:0 5px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:#25a54f;
+    border-radius:6px;
+}
+
+/* HEADER */
+header{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('sekolah.jpg') no-repeat center;
+
+    background-size:cover;
+    text-align:center;
+    padding:130px 20px;
+    color:white;
+}
+
+header h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:50px auto;
+    padding:20px;
+}
+
+/* TITLE BOX */
+.title-box{
+    background:#25a54f;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    margin-bottom:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.title-box h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.title-box p{
+    font-size:18px;
+    opacity:0.95;
+}
+
+/* GRID PRESTASI */
+.prestasi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:25px;
+}
+
+/* CARD PRESTASI */
+.prestasi-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.prestasi-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.prestasi-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.prestasi-card:hover img{
+    transform:scale(1.05);
+}
+
+/* TEXT */
+.prestasi-text{
+    background:#25a54f;
+    color:white;
+    padding:22px;
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.prestasi-text h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.prestasi-text p{
+    font-size:15px;
+    opacity:0.95;
+}
+
+/* HIGHLIGHT */
+.highlight{
+    margin-top:15px;
+    font-size:14px;
+    background:rgba(255,255,255,0.2);
+    padding:8px 12px;
+    border-radius:8px;
+    display:inline-block;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    header p{
+        font-size:18px;
+    }
+
+    .title-box h2{
+        font-size:30px;
+    }
+
+    .prestasi-card img{
+        height:180px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Beranda Sekolah</a>
+    <a href="profil.html">Profil Sekolah</a>
+    <a href="akademik.html">Program Akademik</a>
+    <a href="ekskul.html">Ekstrakurikuler</a>
+    <a href="prestasi.html">Prestasi & Penghargaan</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Prestasi & Penghargaan</h1>
+
+    <p>
+        Bukti Nyata Kerja Keras, Semangat,
+        dan Dedikasi Siswa SMA Pratama Elit Nusantara
+    </p>
+</header>
+
+<!-- CONTAINER -->
+<div class="container">
+
+    <!-- TITLE -->
+    <div class="title-box">
+
+        <h2>Prestasi Sekolah</h2>
+
+        <p>
+            SMA Pratama Elit Nusantara terus mencetak siswa berprestasi
+            di berbagai bidang akademik maupun non-akademik.
+            Prestasi ini menjadi bukti bahwa semangat belajar,
+            disiplin, dan kerja keras mampu membawa siswa
+            meraih pencapaian terbaik hingga tingkat nasional
+            dan internasional.
+        </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="prestasi-grid">
+
+        <!-- 1 -->
+        <div class="prestasi-card">
+
+            <img src="thailand.jpg">
+
+            <div class="prestasi-text">
+
+                <h3>🏆 Juara 1 Pidato Bahasa Thailand</h3>
+
+                <p>
+                    Siswa SMA Pratama Elit Nusantara berhasil
+                    meraih Juara 1 dalam kompetisi pidato
+                    tingkat internasional yang diselenggarakan di Thailand.
+                </p>
+
+                <div class="highlight">
+                    Tingkat Internasional • Tahun 2025
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 2 -->
+        <div class="prestasi-card">
+
+            <img src="math.jpg">
+
+            <div class="prestasi-text">
+
+                <h3>🥇 Olimpiade Matematika</h3>
+
+                <p>
+                    Prestasi membanggakan diraih dalam ajang
+                    Olimpiade Matematika tingkat provinsi
+                    dengan hasil terbaik dan nilai tertinggi.
+                </p>
+
+                <div class="highlight">
+                    Tingkat Provinsi • Tahun 2024
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 3 -->
+        <div class="prestasi-card">
+
+            <img src="inggris.jpg">
+
+            <div class="prestasi-text">
+
+                <h3>🏅 Pidato Bahasa Inggris</h3>
+
+                <p>
+                    Kemampuan komunikasi dan public speaking siswa
+                    berhasil membawa sekolah meraih Juara 1
+                    dalam lomba pidato bahasa Inggris nasional.
+                </p>
+
+                <div class="highlight">
+                    Tingkat Nasional • Tahun 2024
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 4 -->
+        <div class="prestasi-card">
+
+            <img src="futsal.jpg">
+
+            <div class="prestasi-text">
+
+                <h3>🎖️ Juara Futsal Antar Sekolah</h3>
+
+                <p>
+                    Tim futsal sekolah menunjukkan kerja sama,
+                    sportivitas, dan semangat juang tinggi
+                    hingga berhasil menjadi juara pertama.
+                </p>
+
+                <div class="highlight">
+                    Tingkat Kabupaten • Tahun 2025
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMA Pratama Elit Nusantara</p>
+</footer>
+
+</body>
+</html>
